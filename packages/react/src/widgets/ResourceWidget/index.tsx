@@ -31,6 +31,7 @@ export const ResourceWidget: React.FC<IResourceWidgetProps> = observer(
       prefix,
       styleFun: genResourceWidgetStyle,
     });
+    console.log(props.sources)
     const [expand, setExpand] = useState(props.defaultExpand);
     const renderNode = (source: IResource) => {
       const { node, icon, title, thumb, span } = source;

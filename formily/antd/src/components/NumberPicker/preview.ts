@@ -5,7 +5,6 @@ import { DnFC } from '@trionesdev/designable-react';
 import { createFieldSchema } from '../Field';
 import { AllSchemas } from '../../schemas';
 import { AllLocales } from '../../locales';
-
 export const NumberPicker: DnFC<
   React.ComponentProps<typeof FormilyNumberPicker>
 > = FormilyNumberPicker;

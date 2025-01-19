@@ -1,0 +1,39 @@
+{
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "targets": {
+          "chrome": "49",
+          "ios": "10"
+        }
+      }
+    ],
+    [
+      "@babel/preset-react",
+      {
+        "runtime": "automatic"
+      }
+    ],
+    [
+      "@babel/preset-typescript"
+    ]
+  ],
+  "plugins": [
+    [
+      "@babel/plugin-transform-runtime",
+      {
+        "regenerator": true,
+        "helpers": true
+      }
+    ]
+    // [//按需加载
+    //   "import",
+    //   {
+    //     "libraryName": "antd-mobile",
+    //     "libraryDirectory": "es/components",
+    //     "style": false
+    //   }
+    // ]
+  ]
+}

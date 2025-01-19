@@ -65,5 +65,25 @@ module.exports = {
     //     };
     //     return webpackConfig;
     // },
+    configure: (webpackConfig, { env, paths }) => {
+      // webpackConfig.module.rules.push({
+      //   test: /\.(ts|tsx)$/,
+      //   include: [
+      //     path.resolve(__dirname, "src"), // 继续包含 src 目录
+      //     path.resolve(__dirname, "../../node_modules"), // 包括 node_modules 目录
+      //     path.resolve(__dirname, "node_modules"), // 包括 node_modules 目录
+      //     path.resolve(__dirname, "../../packages"), // 包括 node_modules 目录
+      //   ],
+      //   use: {
+      //     loader: 'babel-loader',
+      //   },
+      // });
+      const scopePluginIndex = webpackConfig.resolve.plugins.findIndex(
+        ({ constructor }) => constructor && constructor.name === 'ModuleScopePlugin'
+      );
+
+      webpackConfig.resolve.plugins.splice(scopePluginIndex, 1);
+      return webpackConfig;
+    },
   },
 };

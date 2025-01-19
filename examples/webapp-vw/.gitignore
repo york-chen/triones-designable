@@ -1,0 +1,5 @@
+node_modules
+dist
+/staff
+/visitor
+.DS_Store

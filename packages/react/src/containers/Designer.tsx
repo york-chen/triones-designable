@@ -8,7 +8,6 @@ import { Layout } from './Layout';
 import * as icons from '../icons';
 
 GlobalRegistry.registerDesignerIcons(icons);
-
 export const Designer: React.FC<IDesignerProps> = (props) => {
   const engine = useDesigner();
   const ref = useRef<Engine>();
@@ -43,7 +42,6 @@ export const Designer: React.FC<IDesignerProps> = (props) => {
     </Layout>
   );
 };
-
 Designer.defaultProps = {
   prefixCls: 'dn-',
   theme: 'light',
