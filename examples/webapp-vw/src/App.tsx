@@ -21,7 +21,8 @@ import {
   ViewportPanel,
   ViewToolsWidget,
   Workspace,
-  WorkspacePanel
+  WorkspacePanel,
+  SchemaEditorWidget
 } from '@trionesdev/designable-react';
 import {
   ArrayCards,
@@ -131,6 +132,11 @@ function App() {
                       ArrayTable,
                     }}
                   />
+                )}
+              </ViewPanel>
+              <ViewPanel type="JSONTREE" scrollable={false}>
+                {(tree, onChange) => (
+                  <SchemaEditorWidget tree={tree} onChange={onChange} />
                 )}
               </ViewPanel>
             </ViewportPanel>

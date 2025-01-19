@@ -1,6 +1,6 @@
 import React from 'react';
 import { useField, observer } from '@formily/react';
-import { usePrefix, IconWidget } from '@trionesdev/designable-react';
+import { IconWidget, usePrefix } from '@trionesdev/designable-react';
 import { FoldItem } from '../FoldItem';
 import { SizeInput } from '../SizeInput';
 import { InputItems } from '../InputItems';
@@ -73,7 +73,7 @@ export const BoxStyleSetter: React.FC<IMarginStyleSetterProps> = observer(
         </FoldItem.Base>
         <FoldItem.Extra>
           <InputItems width="50%">
-            <InputItems.Item icon={props.labels[0]}>
+            <InputItems.Item icon={<IconWidget infer="Left" size={16} key="4" />}>
               <SizeInput
                 {...createPositionHandler('top', props)}
                 exclude={['inherit', 'auto']}
@@ -106,9 +106,9 @@ export const BoxStyleSetter: React.FC<IMarginStyleSetterProps> = observer(
 
 BoxStyleSetter.defaultProps = {
   labels: [
-    <IconWidget infer="Top" size={16} key="1" />,
-    <IconWidget infer="Right" size={16} key="2" />,
-    <IconWidget infer="Bottom" size={16} key="3" />,
-    <IconWidget infer="Left" size={16} key="4" />,
+    // <IconWidget infer="Top" size={16} key="1" />,
+    // <IconWidget infer="Right" size={16} key="2" />,
+    // <IconWidget infer="Bottom" size={16} key="3" />,
+    // <IconWidget infer="Left" size={16} key="4" />,
   ],
 };
